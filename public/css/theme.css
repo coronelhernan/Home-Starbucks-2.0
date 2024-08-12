@@ -1,0 +1,41 @@
+/* Tema Claro */
+body.theme-dark {
+  color: var(--text-color-secondary);
+  background: linear-gradient(
+    to bottom,
+    var(--secondary-color) 0%,
+    #011711 25%,
+    #000000 100%
+  );
+}
+
+nav.theme-dark {
+  background: var(--secondary-color);
+}
+
+section.theme-dark {
+  background: linear-gradient(
+    to bottom,
+    var(--secondary-color) 0%,
+    #011711 25%,
+    #000000 100%
+  );
+}
+
+/* Tema Oscuro */
+body.theme-light {
+  color: var(--text-color-dark);
+  background-color: var(--background-color);
+}
+
+nav.theme-light {
+  background: var(--background-color);
+}
+
+#toggleTheme.light {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(289deg) brightness(100%) contrast(105%);
+}
+
+section.theme-light {
+  background: var(--background-color);
+}

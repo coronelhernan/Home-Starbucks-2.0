@@ -1,0 +1,269 @@
+@import "./var.css";
+@import "./theme.css";
+
+body {
+  height: 100vh;
+  margin: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 90px 1fr 1fr;
+  grid-template-areas:
+    "navbar aside"
+    "content aside"
+    "content aside";
+  font-family: var(--font-family);
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  grid-area: navbar;
+  padding: 20px;
+}
+
+.img-logo {
+  height: 60px;
+  width: 60px;
+  background: var(--background-color);
+  border-radius: 50%;
+}
+
+#Logo {
+  width: 60px;
+}
+
+nav #Menu {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+#Menu li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  gap: 5px;
+}
+
+#Menu li:hover {
+  color: var(--text-color-alt);
+}
+
+nav i {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+section {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-area: content;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas:
+    "main-content article-content"
+    "main-container article-content";
+  overflow-y: auto;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+  grid-area: main-content;
+  padding: 30px;
+  gap: 10px;
+}
+
+h2 {
+  color: var(--primary-color);
+}
+
+main h1 {
+  font-size: var(--huge-font-size);
+}
+
+.buttons {
+  display: flex;
+  gap: 14px;
+  height: fit-content;
+  width: fit-content;
+}
+
+#order-now,
+#delivery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 140px;
+  border: none;
+  border-radius: 25px;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3), 0 4px 22px rgba(0, 0, 0, 0.25);
+}
+
+#order-now {
+  color: var(--text-color-secondary);
+  background: var(--background-color-dark);
+}
+
+#delivery {
+  color: var(--text-color-secondary);
+  background: var(--primary-color);
+}
+
+#order-now:hover {
+  color: var(--text-color-alt);
+  opacity: 0.9;
+  transition: all 200ms ease-in-out;
+}
+
+#delivery:hover {
+  color: var(--primary-color);
+  background: var(--background-color-dark);
+  opacity: 0.9;
+  transition: all 200ms ease-in-out;
+}
+
+#order-now i {
+  font-size: 16px;
+}
+
+#delivery i {
+  font-size: 22px;
+}
+
+/* Aside */
+aside {
+  grid-area: article-content;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+}
+
+/* Contenedor del producto principal */
+.Producto {
+  display: flex;
+  width: 100%;
+  height: 100%; 
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagen del producto principal */
+#producto {
+  height: 95%;
+  filter: drop-shadow(10px 20px 20px rgba(0,0,0, 0.7));
+}
+
+.Product-Text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#name-product {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: var(--medium-font-size);
+  position: relative;
+}
+
+/* Contenedor de Productos */
+.container {
+  width: 100%;
+  display: flex;
+  grid-area: main-container;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Carrusel Personalizado */
+.carousel {
+  position: relative;
+  width: 60%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  transform: translateX(-150px);
+}
+
+.carousel-inner {
+  width: auto; 
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 5px;
+  padding: 10px;
+  justify-content: flex-start;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 180px;
+  height: 180px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.product-item {
+  height: 180px;
+  width: 180px;
+  max-width: 300px;
+  background: transparent;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(6px 10px 8px rgba(0,0,0, 0.7));
+}
+
+.product-img {
+  height: 90%;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+}

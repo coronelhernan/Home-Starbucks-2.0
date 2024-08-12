@@ -1,0 +1,28 @@
+{
+  "productoPrincipal": {
+    "name": "Starbucks Reserve™ Coffee Blend",
+    "src": "public/img/starbucks-coffe-edition-especial.png"
+  },
+  "productos": [
+    {
+      "name": "Starbucks Signature Blend",
+      "src": "public/img/starbucks-coffee-edition-especial.png"
+    },
+    {
+      "name": "Starbucks Caramel Frappe",
+      "src": "public/img/starbucks-caramel-frappe.png"
+    },
+    {
+      "name": "Starbucks Vanilla Frappuccino",
+      "src": "public/img/starbucks-vainilla-frapuccino.png"
+    },
+    {
+      "name": "Starbucks Espresso Roast",
+      "src": "public/img/starbucks-coffe-espresso-roast.png"
+    },
+    {
+      "name": "Starbucks Edition Brew",
+      "src": "public/img/starbucks-coffe-edition-brew.png"
+    }
+  ]
+}
