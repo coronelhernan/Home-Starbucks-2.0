@@ -67,10 +67,9 @@
 
   main {
     height: auto;
-    max-height: 50vh;
+    min-height: 50vh;
     padding: 30px;
     gap: 15px;
-    border: 1px solid blue;
   }
 
   main h1 {
